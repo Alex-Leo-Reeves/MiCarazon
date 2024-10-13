@@ -1,0 +1,75 @@
+body {
+    background-color: #f2c4e7;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.flowers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-image: url('flowers.jpg');
+    background-size: cover;
+    animation: flowers 10s infinite;
+}
+
+@keyframes flowers {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.buttons {
+    position: relative;
+    z-index: 1;
+}
+
+#yes, #yes2 {
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#yes:hover, #yes2:hover {
+    background-color: #ff99cc;
+}
+
+.ring {
+    position: relative;
+    z-index: 1;
+    display: none;
+    text-align: center;
+}
+
+.ring img {
+    width: 50%;
+    height: 50%;
+    margin: 20px;
+}
+
+/* Transitions */
+.flowers {
+    transition: opacity 2s;
+}
+
+.ring {
+    transition: opacity 2s;
+}
+
+.buttons {
+    transition: opacity 2s;
+}
+
